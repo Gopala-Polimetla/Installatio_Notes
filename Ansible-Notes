@@ -24,4 +24,5 @@
    24  systemctl status nginx
    25  ansible webservers -m service -a "name=nginx state=stopped"
    26  ansible webservers -m service -a "name=nginx state=started"
+       ansible webservers -m copy -a "src=/opt/sample.txt dest=/opt/sample.txt"
    27  history
