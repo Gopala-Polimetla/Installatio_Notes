@@ -16,3 +16,12 @@
    16  ansible webservers -m user -a "name=john password=john" -s
    17  ansible webservers -m user -a "name=john password=john"
    18  history
+   ansible webservers -m apt -a "name=rpm state=present"
+   20  ansible webservers -m apt -a "name=docker state=present"
+   21  ansible webservers -m service -a "name=httpd state=started"
+   22  ansible webservers -m apt -a "name=httpd state=present"
+   23  ansible webservers -m apt -a "name=nginx state=present"
+   24  systemctl status nginx
+   25  ansible webservers -m service -a "name=nginx state=stopped"
+   26  ansible webservers -m service -a "name=nginx state=started"
+   27  history
